@@ -16,13 +16,13 @@
     <listener-class>kr.or.itjob.listener.ApplicationListener</listener-class>
   </listener>
   <listener>
-    <listener-class>kr.or.itjob.listener.LoginUserListener</listener-class>
-  </listener>
-  <listener>
-    <listener-class>kr.or.itjob.listener.LoginComListener</listener-class>
-  </listener>
-  <listener>
     <listener-class>kr.or.itjob.listener.LoginAdminListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>kr.or.itjob.listener.LoginComUsersListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>kr.or.itjob.listener.LoginUserListener</listener-class>
   </listener>
   <servlet>
     <servlet-name>dispatcherServlet</servlet-name>

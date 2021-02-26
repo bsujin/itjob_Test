@@ -15,6 +15,24 @@
 		SELECT * FROM users WHERE users_id = #{users_id}
 	</select>
 	
+	<insert id="insertUser" parameterType="userVo">
+	
+		INSERT INTO users 
+		(users_num,users_id,users_com,users_nm,users_pass,users_em,users_logindate,users_passfailcnt,users_act,act_dt)
+		values(
+		(select NVL(MAX(users_num),0)+1 from users),
+		#{users_id},
+		#{users_com},
+		#{users_nm},
+		#{users_pass},
+		#{users_em},
+		sysdate,
+		#{users_passfailcnt},
+		#{users_act},
+		sysdate)
+		
+	</insert>
+	
 	
 	
 </mapper>

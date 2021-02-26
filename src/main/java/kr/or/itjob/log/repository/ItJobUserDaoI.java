@@ -13,4 +13,7 @@ public interface ItJobUserDaoI {
 	// 사용자 한명의 조회(하섭)
 	ItJobUserVo selectUser(String users_id);
 	
+	// 회원가입 등록(하섭)
+	int usersigninsert(ItJobUserVo userVo);
+	
 }
