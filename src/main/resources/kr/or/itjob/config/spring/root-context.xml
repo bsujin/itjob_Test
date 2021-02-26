@@ -18,8 +18,8 @@
 		<!-- 	list 형태 -->
 			<list>
 					<!-- bundle은 이름까지만(_전까지) 등록  언어 코드, .properties 는 제외 -->
-				<value>classpath:/kr/or/ddit/msg/error/error</value>
-				<value>classpath:/kr/or/ddit/msg/msg/msg</value>
+				<value>classpath:/kr/or/itjob/msg/error/error</value>
+				<value>classpath:/kr/or/itjob/msg/msg/msg</value>
 			</list>
 		</property>
 	</bean>
