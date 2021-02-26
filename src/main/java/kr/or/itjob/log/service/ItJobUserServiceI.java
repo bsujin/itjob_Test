@@ -24,4 +24,7 @@ public interface ItJobUserServiceI {
 	 */
 	
 	ItJobUserVo selectUser(String users_id);
+	
+	// 회원가입 등록(하섭)
+	int usersigninsert(ItJobUserVo userVo);
 }

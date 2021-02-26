@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import kr.or.itjob.model.ItJobAdminVo;
-import kr.or.itjob.model.ItJobComVo;
 
 public class LoginAdminListener implements HttpSessionAttributeListener{
 	private static final Logger logger = LoggerFactory.getLogger(LoginAdminListener.class);

@@ -30,4 +30,11 @@ public class ItJobUserService implements ItJobUserServiceI{
 		return itjobuserDao.selectUser(users_id);
 	}
 
+	@Override
+	public int usersigninsert(ItJobUserVo userVo) {
+		return itjobuserDao.usersigninsert(userVo);
+	}
+	
+	
+
 }

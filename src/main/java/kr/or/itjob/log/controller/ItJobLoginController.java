@@ -2,17 +2,19 @@ package kr.or.itjob.log.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.or.itjob.log.service.ItJobAdminService;
-import kr.or.itjob.log.service.ItJobComSerivce;
+import kr.or.itjob.log.service.ItJobComUsersSerivce;
 import kr.or.itjob.log.service.ItJobUserService;
 import kr.or.itjob.model.ItJobAdminVo;
-import kr.or.itjob.model.ItJobComVo;
+import kr.or.itjob.model.ItJobComUsersVo;
 import kr.or.itjob.model.ItJobUserVo;
 
 @RequestMapping("itjob")
@@ -22,8 +24,8 @@ public class ItJobLoginController {
 	@Resource(name = "itjobuserService")
 	private ItJobUserService itjobuserService;
 	
-	@Resource(name = "itjobcomService")
-	private ItJobComSerivce itjobcomService;
+	@Resource(name = "itjobcomusersService")
+	private ItJobComUsersSerivce itjobcomService;
 	
 	@Resource(name = "itjobadminservice")
 	private ItJobAdminService itjobadminService;
@@ -78,7 +80,7 @@ public class ItJobLoginController {
 		
 		if(dbUser != null && userVo.getUsers_pass().equals(dbUser.getUsers_pass())) {
 			session.setAttribute("S_USER", dbUser);
-			return "main/advanced-components";
+			return "itjobusermain";
 		}else {
 			ra.addFlashAttribute("msg",	"로그인 정보가 옳지 않습니다");
 			return "redirect:/itjob/userloginview";
@@ -86,9 +88,9 @@ public class ItJobLoginController {
 		
 	}
 	@RequestMapping(path = "comloginok", method = RequestMethod.POST)
-	public String comloginok(ItJobComVo comVo, HttpSession session,RedirectAttributes ra) {
+	public String comloginok(ItJobComUsersVo comVo, HttpSession session,RedirectAttributes ra) {
 		
-		ItJobComVo dbUser = itjobcomService.selectCom(comVo.getCom_id());
+		ItJobComUsersVo dbUser = itjobcomService.selectCom(comVo.getCom_id());
 		
 		if(dbUser != null && comVo.getCom_pass().equals(dbUser.getCom_pass())) {
 			session.setAttribute("S_COM", dbUser);
@@ -117,6 +119,9 @@ public class ItJobLoginController {
 	
 	@RequestMapping("usersignview")
 	public String usersingview() {
+		
+		
+		
 		return "/user/usersignview";
 	}
 	
@@ -139,6 +144,26 @@ public class ItJobLoginController {
 	@RequestMapping("capchakey")
 	public String capchakey() {
 		return "/user/capchakey";
+	}
+	
+	@RequestMapping(path = "usersignok", method = RequestMethod.POST )
+	public String usersignok(@Valid ItJobUserVo userVo,BindingResult result, String users_id) {
+		
+		int insertCnt = 0;
+		
+		try {
+			insertCnt = itjobuserService.usersigninsert(userVo);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			insertCnt =0;
+		}
+		if(insertCnt ==1) {
+			return "userloginview";
+		}else {
+			return "/user/usersignview";
+		}
+		
 	}
 	
 	

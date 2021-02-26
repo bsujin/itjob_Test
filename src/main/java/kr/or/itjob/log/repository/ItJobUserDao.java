@@ -29,4 +29,9 @@ public class ItJobUserDao implements ItJobUserDaoI{
 		return template.selectOne("user.selectUser",users_id);
 	}
 
+	@Override
+	public int usersigninsert(ItJobUserVo userVo) {
+		return template.insert("user.insertUser", userVo);
+	}
+
 }
