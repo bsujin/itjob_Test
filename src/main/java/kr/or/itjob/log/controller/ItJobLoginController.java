@@ -120,8 +120,6 @@ public class ItJobLoginController {
 	@RequestMapping("usersignview")
 	public String usersingview() {
 		
-		
-		
 		return "/user/usersignview";
 	}
 	
