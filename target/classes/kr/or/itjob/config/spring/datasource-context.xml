@@ -13,7 +13,7 @@
 		2. sqlSessionFactoryBean(SqlSessionFactory)
 		3. sqlSessionTemplate 
 !-->
-	<context:property-placeholder location="classpath:/kr/or/itjob/config/db/dbinfo.properties"/>
+	<context:property-placeholder location="classpath:/kr/or/itjob/config/db/*.properties"/>
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}"/>
 		<property name="url" value="${jdbc.url}"/>
@@ -42,9 +42,9 @@
 	
 	<!-- 1. bean 선언 순서 중요하지 않음
 		 2. 다른 설정파일에 선언한 스프링 빈도 참조하는게 가능 -->
+		 
 	
 </beans>
-
 
 
 
