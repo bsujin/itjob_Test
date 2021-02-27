@@ -19,14 +19,14 @@
 		<typeAlias type="kr.or.itjob.model.PageVo" alias="pageVo"/>
 	</typeAliases>
 	
-	
 
 <!--   mapper와 연결  -->
   <mappers>
+    
     <mapper resource="kr/or/itjob/config/mybatis/mapper/job_board.xml"/>
     <mapper resource="kr/or/itjob/config/mybatis/mapper/user.xml" />
 	<mapper resource="kr/or/itjob/config/mybatis/mapper/com_users.xml" />
 	<mapper resource="kr/or/itjob/config/mybatis/mapper/admin.xml" />
+ 
   </mappers>
-  
 </configuration>
