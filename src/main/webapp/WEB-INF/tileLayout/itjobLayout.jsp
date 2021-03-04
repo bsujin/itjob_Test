@@ -20,15 +20,11 @@
 	<header>
 		<tiles:insertAttribute name="header" />
 	</header>
-	
-	<section class="blog_area section-padding">
 		<tiles:insertAttribute name="body" />
-	</section>
 	<!-- footer start -->
 	<footer class="footer">
 	<tiles:insertAttribute name="footer" />
 	</footer>
 	<!--/ footer end  -->
-	
 </body>
 </html>

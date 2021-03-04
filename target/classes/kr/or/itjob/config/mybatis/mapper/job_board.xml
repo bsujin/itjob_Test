@@ -8,7 +8,7 @@
     SELECT * FROM job_board
   </select>
   
-  <select id="selectCom_user" resultType="comUsersVo" parameterType="String">
+  <select id="selectjob_BoardCom" resultType="comUsersVo" parameterType="String">
   	SELECT * FROM job_board WHERE com_id = #{com_id} 
   </select>
   
@@ -28,18 +28,17 @@
    SELECT COUNT(*) FROM job_board 
   </select>
   
-<!--   <select id="selectjob_Board" resultType="job_BoardVo" parameterType="job_BoardVo"> -->
-<!--   	SELECT *  -->
-<!--   	FROM job_board  -->
-<!--   	WHERE  com_id = #{com_id}  -->
-<!--   	and job_title = #{job_title} -->
-<!--   </select> -->
-  
   <select id="selectjob_Board" resultType="job_BoardVo" parameterType="job_BoardVo">
-  	select * 
-	from job_board k ,com_users c
-	where k.com_id = c.com_id;
+  	SELECT * 
+  	FROM job_board 
+  	WHERE  com_id = #{com_id} 
+  	and job_title = #{job_title}
   </select>
+<!--   <select id="selectjob_Board" resultType="job_BoardVo" parameterType="job_BoardVo"> -->
+<!--   	select *  -->
+<!-- 	from job_board k ,com_users c -->
+<!-- 	where k.com_id = c.com_id; -->
+<!--   </select> -->
   
 </mapper>
 

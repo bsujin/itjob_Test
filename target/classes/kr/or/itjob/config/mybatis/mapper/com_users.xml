@@ -10,7 +10,6 @@
 	</select>
 	
 	<!-- 아이디 -->
-	
 	<select id="selectCom" resultType="comUsersVo" parameterType="String">
 		SELECT * FROM com_users WHERE com_id = #{com_id}
 	</select>

@@ -20,6 +20,7 @@ public class adminViewController {
 	@RequestMapping("admin_mypage")
 	public String user_mypageView() {
 		return "/admin/mypage";
+		
 	}
 	
 	@RequestMapping("codingTest")

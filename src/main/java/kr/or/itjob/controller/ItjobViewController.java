@@ -3,29 +3,33 @@ package kr.or.itjob.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("itjobView")
+@RequestMapping("itjobview")
 @Controller
 public class ItjobViewController {
 	
 	@RequestMapping("login")
 	public String loginView() {
-		return "/login/login2";
+		return "/login/login";
 	}
 	
+	//이미지게시판
 	@RequestMapping("imageboard")
 	public String imageboardView() {
 		return "/itjob/imageboard";
 	}
 	
+	//코딩 테스트 
 	@RequestMapping("codingTest")
 	public String codingTestView() {
 		return "/itjob/codingTest";
 	}
 	
+	//메인 화면 	
 	@RequestMapping("main")
 	public String mainView() {
 		return "/itjob/main";
 	}
+	
 	
 	@RequestMapping("candidate")
 	public String candidateView() {
@@ -60,6 +64,10 @@ public class ItjobViewController {
 	@RequestMapping("calendar")
 	public String calendarView() {
 		return "/itjob/calendar";
+	}
+	@RequestMapping("faq")
+	public String faqView() {
+		return "/itjob/faq";
 	}
 	
 	

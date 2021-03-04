@@ -17,21 +17,22 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="${cp }/itjobView/main">home</a></li>
-                                            <li><a href="${cp }/itjobView/jobs">Browse Job</a></li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                            <li><a href="${cp }/itjobView/jobs">개발자 채용</a></li>
+                                            <li><a href="${cp }/itjobView/codingTest">codingTest </a></li>
+                                            <li><a href="#">커뮤니티<i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="${cp }/itjobView/candidate">Candidates </a></li>
-                                                    <li><a href="${cp }/itjobView/job_details">job details </a></li>
-                                                    <li><a href="${cp }/itjobView/elements">elements</a></li>
+                                                    <li><a href="${cp }/itjobView/imageboard">HR게시판</a></li>
+                                                    <li><a href="${cp }/itjobView/elements">익명게시판</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                            <li><a href="#">고객센터<i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="${cp }/itjobView/imageboard">imageboard</a></li>
-                                                    <li><a href="${cp }/itjobView/singleblog">single-blog</a></li>
+                                                    <li><a href="${cp }/itjobView/singleblog">공지사항</a></li>
+                                                    <li><a href="${cp }/itjobView/singleblog">Q&A</a></li>
+                                                    <li><a href="${cp }/itjobView/singleblog">FAQ</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="${cp }/itjobView/candidate">자료실</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -41,9 +42,9 @@
                                     <div class="phone_num d-none d-xl-block">
                                         <a href="#">Log in</a>
                                     </div>
-                                    <div class="d-none d-lg-block">
-                                        <a class="boxed-btn3" href="#">Post a Job</a>
-                                    </div>
+<!--                                     <div class="d-none d-lg-block"> -->
+<!--                                         <a class="boxed-btn3" href="#">Post a Job</a> -->
+<!--                                     </div> -->
                                 </div>
                             </div>
                             <div class="col-12">
@@ -55,15 +56,3 @@
                 </div>
             </div>
         </div>
-        
-         <div class="bradcam_area bradcam_bg_1">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="bradcam_text">
-                        <h3>blog</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>

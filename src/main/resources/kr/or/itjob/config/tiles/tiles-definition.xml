@@ -49,7 +49,7 @@
 <!--       	<put-attribute name="footer" value="/WEB-INF/common/itjob/footer.jsp" /> -->
 <!--     </definition> -->
 
- <definition name="/adminlogin/*" extends=".admin">
+   <definition name="/adminlogin/*" extends=".admin">
   	<put-attribute name="body" value="/WEB-INF/login/{1}.jsp"/>
   </definition>
 
@@ -65,12 +65,12 @@
   	<put-attribute name="body" value="/WEB-INF/itjob/{1}.jsp"/>
   </definition>
   
-  <definition name="/user/*" extends=".jobmain">
-  	<put-attribute name="body" value="/WEB-INF/user/{1}/{2}/.jsp"/>
-  </definition>
+<!--   <definition name="/user/*" extends=".jobmain"> -->
+<!--   	<put-attribute name="body" value="/WEB-INF/user/{1}/{2}/{3}.jsp"/> -->
+<!--   </definition> -->
   
   <definition name="/com_user/*" extends=".jobmain">
-  	<put-attribute name="body" value="/WEB-INF/com_user/{1}/{2}/.jsp"/>
+  	<put-attribute name="body" value="/WEB-INF/com_user/{1}.jsp"/>
   </definition>
   
 </tiles-definitions>
