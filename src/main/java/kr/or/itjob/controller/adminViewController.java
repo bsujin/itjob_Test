@@ -36,8 +36,8 @@ public class adminViewController {
 	public String faqView() {
 		return "/admin/faq";
 	}
-	@RequestMapping("mypage")
-	public String mypageView() {
+	@RequestMapping("mypage123123")
+	public String mypageView123123() {
 		return "/admin/mypage";
 	}
 	
