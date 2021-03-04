@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("adminview")
 @Controller
-public class adminViewController {
+public class adminViewController2 {
 	
 	@RequestMapping("login")
 	public String loginView() {
@@ -36,14 +36,8 @@ public class adminViewController {
 	public String faqView() {
 		return "/admin/faq";
 	}
-	//modify
 	@RequestMapping("mypage")
 	public String mypageView() {
-		return "/admin/mypagex";
-	}
-	//added
-	@RequestMapping("mypage2")
-	public String mypageView2() {
 		return "/admin/mypage";
 	}
 	
