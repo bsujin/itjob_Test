@@ -36,7 +36,11 @@ public class adminViewController {
 	public String faqView() {
 		return "/admin/faq";
 	}
-	//modify
+//test03
+	@RequestMapping("mypage123123")
+	public String mypageView123123() {
+
+	//modify 
 	@RequestMapping("mypage")
 	public String mypageView() {
 		return "/admin/mypagex";
